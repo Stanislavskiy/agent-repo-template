@@ -4,7 +4,7 @@
 
 ## Local Overrides
 
-Read AGENTS.local.md
+Read AGENTS.local.md if it exists (gitignored — personal overrides, not shared)
 
 ## Project Identity
 
@@ -41,7 +41,8 @@ These apply to every task without needing a trigger:
 
 ```
 AGENTS.md                ← entry point (repo root, this file)
-AGENTS.local.md          ← project-level overrides (supplements this file)
+AGENTS.local.md          ← local overrides · gitignored (personal/experimental)
+AGENTS.local.md.example  ← template for AGENTS.local.md
 .agents/                 ← agent context root
   context/               ← context enrichment for task solving
     architecture.md      ← system design, services, data flow, infra
