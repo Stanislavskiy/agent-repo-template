@@ -4,10 +4,11 @@
 ---
 
 ## Context (load before this prompt)
-- `.agent/AGENT.md`
-- `.agent/context/conventions.md`
-- `.agent/context/domain.md`
-- `.agent/context/architecture.md` _(if new service or infra change)_
+- `AGENTS.md`
+- `.agents/context/principles/distilled/`
+- `.agents/context/principles/` _(for new patterns or architecture decisions)_
+- `.agents/context/domain.md`
+- `.agents/context/architecture.md` _(if new service or infra change)_
 
 ## Task
 Implement the following feature according to project conventions.
@@ -25,7 +26,7 @@ Implement the following feature according to project conventions.
 - **Dependencies allowed:** `[list, or "existing deps only"]`
 
 ## Constraints
-- Must follow: `[specific pattern from conventions.md, e.g. Repository pattern]`
+- Must follow: `[specific pattern from principles/, e.g. Repository pattern]`
 - Must not touch: `[protected paths]`
 - Test coverage: unit tests required for all new public functions
 

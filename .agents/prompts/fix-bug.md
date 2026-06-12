@@ -4,9 +4,9 @@
 ---
 
 ## Context (load before this prompt)
-- `.agent/AGENT.md`
-- `.agent/context/conventions.md`
-- `.agent/context/architecture.md` _(if issue may be systemic)_
+- `AGENTS.md`
+- `.agents/context/principles/distilled/`
+- `.agents/context/architecture.md` _(if issue may be systemic)_
 
 ## Bug Report
 **Summary:** [One sentence]

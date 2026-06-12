@@ -1,6 +1,6 @@
 # Architecture
 > Scope: system topology, service boundaries, data flow, infrastructure.
-> For code style/patterns → `conventions.md`. For domain rules → `domain.md`.
+> For code style/patterns → `principles/`. For domain rules → `domain.md`.
 
 ## System Topology
 ```
@@ -12,10 +12,8 @@ Client → [API Gateway] → [Service A] ──┬── [DB A]
 ```
 
 ## Services / Modules
-| Name | Responsibility | Owns | Consumes |
-|------|---------------|------|----------|
-| `[service-a]` | [one line] | `[db/table]` | `[service-b API]` |
-| `[service-b]` | [one line] | `[db/table]` | `[queue topic]` |
+- `[service-a]` — [one line responsibility] · owns: [db/table] · consumes: [service-b API]
+- `[service-b]` — [one line responsibility] · owns: [db/table] · consumes: [queue topic]
 
 ## Data Flow
 ```
@@ -25,24 +23,20 @@ Request → Auth middleware → Rate limiter → Handler → Repository → DB
 ```
 
 ## Infrastructure
-| Concern | Technology | Notes |
-|---------|-----------|-------|
-| Hosting | `[provider/service]` | [region, tier] |
-| Container | `[Docker / K8s / ECS]` | [cluster details] |
-| Database | `[engine@version]` | [primary + replica?] |
-| Cache | `[Redis / Memcached]` | [TTL strategy] |
-| Queue | `[SQS / RabbitMQ / Kafka]` | [topics/queues] |
-| CDN | `[CloudFront / Cloudflare]` | [assets, edge rules] |
-| Secrets | `[Vault / SSM / Doppler]` | [rotation policy] |
-| CI/CD | `[GitHub Actions / GitLab]` | [pipeline file path] |
-| Observability | `[Datadog / Grafana]` | [key dashboards] |
+- hosting: [provider/service] ([region, tier])
+- container: [Docker / K8s / ECS] ([cluster details])
+- database: [engine@version] ([primary + replica?])
+- cache: [Redis / Memcached] ([TTL strategy])
+- queue: [SQS / RabbitMQ / Kafka] ([topics/queues])
+- cdn: [CloudFront / Cloudflare] ([assets, edge rules])
+- secrets: [Vault / SSM / Doppler] ([rotation policy])
+- ci-cd: [GitHub Actions / GitLab] ([pipeline file path])
+- observability: [Datadog / Grafana] ([key dashboards])
 
 ## Deployment Environments
-| Env | Branch | Auto-deploy | Notes |
-|-----|--------|-------------|-------|
-| `dev` | `develop` | ✅ on push | |
-| `staging` | `main` | ✅ on push | mirrors prod data shape |
-| `prod` | tags `v*` | manual approval | [rollback procedure] |
+- dev: branch=develop, auto-deploy=on push
+- staging: branch=main, auto-deploy=on push (mirrors prod data shape)
+- prod: branch=tags v*, deploy=manual approval ([rollback procedure])
 
 ## Scalability Touchpoints
 - **Horizontal scale:** `[which services scale out, HPA rules if K8s]`

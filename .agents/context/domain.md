@@ -1,15 +1,13 @@
 # Domain Model
 > Scope: core entities, relationships, business rules, glossary.
-> For DB/infra details → `architecture.md`. For code patterns → `conventions.md`.
+> For DB/infra details → `architecture.md`. For code patterns → `principles/`.
 
 ## Glossary
 > Define terms that have a specific meaning in this project. Agents must use these names exactly.
 
-| Term | Definition |
-|------|-----------|
-| `[Entity]` | [precise definition, distinguish from similar terms] |
-| `[Entity]` | |
-| `[Concept]` | |
+- `[Entity]`: [precise definition, distinguish from similar terms]
+- `[Entity]`:
+- `[Concept]`:
 
 ## Core Entities
 > List the 5–10 most important domain objects. Skip obvious CRUD scaffolding.
@@ -62,6 +60,4 @@ RULE-003  [Name]   : [Description.]
 ```
 
 ## External Integrations
-| System | What we use it for | Data exchanged | Contract location |
-|--------|--------------------|----------------|-------------------|
-| `[System]` | [purpose] | [entity/event names] | `[path or URL]` |
+- `[System]` — [purpose] · data: [entity/event names] · contract: [path or URL]

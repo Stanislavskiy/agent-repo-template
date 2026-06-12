@@ -4,8 +4,8 @@
 ---
 
 ## Context (load before this prompt)
-- `.agent/AGENT.md`
-- `.agent/context/conventions.md`
+- `AGENTS.md`
+- `.agents/context/principles/distilled/`
 
 ## Task
 Refactor the target code to improve [quality dimension] without changing observable behavior.
@@ -22,7 +22,7 @@ Refactor the target code to improve [quality dimension] without changing observa
 - **Behavior must not change** — all existing tests must pass after refactor
 - Do not expand scope beyond listed files without explicit instruction
 - Do not change public API / exported signatures unless listed as a goal
-- If a new pattern is introduced, add a brief comment citing `conventions.md`
+- If a new pattern is introduced, add a brief comment citing the relevant principle
 
 ## Output expected
 - [ ] Refactored file(s)
