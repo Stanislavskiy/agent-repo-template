@@ -13,7 +13,25 @@
 
 ### Routines
 - Use `routines/` for multi-step tasks — do not merge steps or skip gates
-- Scratch artifacts must follow compact format: file references and one-liners only, no prose dumps
+- Check `routines/INDEX.md` to find the matching workflow before starting
+
+### Scratch Artifact Format
+Every scratch artifact must follow this structure (max 30 lines):
+
+```
+## Decision
+[1–2 sentences]
+## Files
+- path/to/file — [why, one line]
+## Pattern
+[principle name + path reference]
+## Risks
+- [one line each]
+```
+
+- Write file paths + one-line reason — not file contents
+- Reference principle names/paths — not full principle text
+- No explanatory paragraphs
 
 ### Documentation Sync
 - Update `docs/` when changing behavior that is documented there

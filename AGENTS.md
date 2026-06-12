@@ -16,6 +16,7 @@ Read AGENTS.local.md
 
 ## Context Routing — load ONLY what your task needs
 
+- multi-step task (feature | bug | refactor): check `routines/INDEX.md` for a matching workflow first
 - new-feature: `context/principles/distilled/` + `context/principles/` + `context/architecture.md` + `context/domain.md`
 - bug-fix: `context/principles/distilled/` + `context/architecture.md`
 - refactor/tests/CI: `context/principles/distilled/`
@@ -54,6 +55,7 @@ AGENTS.local.md          ← project-level overrides (supplements this file)
   prompts/
     [task-slug].md       ← reusable task prompt templates
   routines/
+    INDEX.md             ← routines index (check before multi-step work)
     [routine-slug].md    ← multi-step multi-agent workflows
   scratch/               ← gitignored · ephemeral inter-agent state
 .github/
