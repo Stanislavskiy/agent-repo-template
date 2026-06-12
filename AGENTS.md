@@ -53,6 +53,9 @@ AGENTS.local.md          ← project-level overrides (supplements this file)
     YYYYMMDD-[slug].md   ← ADRs (append-only)
   prompts/
     [task-slug].md       ← reusable task prompt templates
+  routines/
+    [routine-slug].md    ← multi-step multi-agent workflows
+  scratch/               ← gitignored · ephemeral inter-agent state
 .github/
   workflows/
     distill-principles.yml ← CI trigger for distillation pipeline

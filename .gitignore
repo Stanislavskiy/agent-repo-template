@@ -1,3 +1,6 @@
+# Agent scratch space (ephemeral inter-agent state)
+.agents/scratch/
+
 # OS
 .DS_Store
 Thumbs.db

@@ -11,6 +11,10 @@
 - DO NOT refactor unrelated code or expand scope beyond the stated task
 - DO NOT modify protected paths listed in AGENTS.md without explicit instruction
 
+### Routines
+- Use `routines/` for multi-step tasks — do not merge steps or skip gates
+- Scratch artifacts must follow compact format: file references and one-liners only, no prose dumps
+
 ### Documentation Sync
 - Update `docs/` when changing behavior that is documented there
 - DO NOT edit `context/principles/distilled/` directly — changes must go through `docs/` and the distillation pipeline
