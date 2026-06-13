@@ -31,6 +31,7 @@ Read AGENTS.local.md if it exists (gitignored — personal overrides, not shared
 These apply to every task without needing a trigger:
 
 - **Minimal fix** — apply the smallest change that solves the problem; do not expand scope across layers unless each layer is genuinely load-bearing
+- **Capture learnings** — when the developer corrects an approach or flags an important note mid-task, offer to capture it using `prompts/capture-learning.md` before continuing
 
 ## Project Notes
 
