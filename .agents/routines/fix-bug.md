@@ -37,7 +37,7 @@ On failure: loop-back to Step 1 with failure context appended
 ---
 
 ## Step 3 — Regression Test · act
-Reads: `.agents/context/principles/distilled/` + file paths from `scratch/fix-bug-findings.md`
+Reads: `.agents/context/principles/distilled/` + file paths from `.agents/scratch/fix-bug-findings.md`
 Actions:
 - Write a test that reproduces the original bug and passes with the fix applied
 - Confirm all pre-existing tests still pass

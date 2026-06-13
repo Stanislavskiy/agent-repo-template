@@ -20,8 +20,8 @@ can recognize the trigger without ambiguity.]
 
 Wire it up so agents find it automatically — choose one or both:
 
-- **Routine step**: add `follow .agents/playbooks/[name].md` to the relevant `Actions:` line in `routines/[routine].md`
-- **Principle**: add `When [doing X], follow .agents/playbooks/[name].md` to the relevant `context/principles/[file].md`
+- **Routine step**: add `follow .agents/playbooks/[name].md` to the relevant `Actions:` line in `.agents/routines/[routine].md`
+- **Principle**: add `When [doing X], follow .agents/playbooks/[name].md` to the relevant `.agents/context/principles/[file].md`
 
 Without this, the agent will only use the playbook if the developer references it explicitly in the task prompt.
 

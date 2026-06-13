@@ -23,10 +23,10 @@ Choose exactly one destination:
   → Update the relevant doc; flag that the distillation pipeline should run after this session
 
 - **`.agents/playbooks/[name].md`** — recurring project-specific sub-task procedure
-  → Create from `playbooks/TEMPLATE.md`; describe the steps concretely
+  → Create from `.agents/playbooks/TEMPLATE.md`; describe the steps concretely
 
-- **`adr/`** — architectural decision with lasting consequences
-  → Create a new ADR from `adr/YYYYMMDD-template.md`; update `adr/INDEX.md`
+- **`.agents/adr/`** — architectural decision with lasting consequences
+  → Create a new ADR from `.agents/adr/YYYYMMDD-template.md`; update `.agents/adr/INDEX.md`
 
 ## Constraints
 - One note = one destination — do not fan out to multiple files

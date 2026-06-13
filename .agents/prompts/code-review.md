@@ -14,7 +14,7 @@
 
 ## Review Checklist
 - [ ] Correctness — logic errors, edge cases, missing error handling
-- [ ] Principles compliance — verify against `context/principles/distilled/`
+- [ ] Principles compliance — verify against `.agents/context/principles/distilled/`
 - [ ] Security — injection, auth bypass, data exposure, unvalidated input
 - [ ] Performance — N+1 queries, missing indexes, blocking operations
 - [ ] Test coverage — new paths covered, assertions test behavior not implementation

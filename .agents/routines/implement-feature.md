@@ -35,7 +35,7 @@ On failure: loop-back to Step 1 with failure context appended to plan
 ---
 
 ## Step 3 — Test · act  ∥ parallelizable with Step 4
-Reads: `.agents/context/principles/distilled/` + file paths listed in `scratch/implement-feature-plan.md`
+Reads: `.agents/context/principles/distilled/` + file paths listed in `.agents/scratch/implement-feature-plan.md`
 Actions:
 - Write tests covering all new behavior described in acceptance criteria
 - Tests must assert behavior, not implementation details

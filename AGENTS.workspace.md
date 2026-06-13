@@ -2,7 +2,7 @@
 > Workspace-specific rules and context. Committed — shared with the team.
 > Supplements AGENTS.md. Keep entries current; remove when no longer relevant.
 
-## Active Techdept / Focus
+## Active Tech Debt / Focus
 [Current tech goal or active workstream — 1-2 sentences. Remove when not relevant.]
 
 ## Known Issues / Watch Areas
