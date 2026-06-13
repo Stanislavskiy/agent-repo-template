@@ -56,6 +56,9 @@ AGENTS.local.md.example  ← template for AGENTS.local.md
   adr/
     INDEX.md             ← ADR index (check before design decisions)
     YYYYMMDD-[slug].md   ← ADRs (append-only)
+  playbooks/
+    TEMPLATE.md          ← template for new playbooks
+    [playbook-slug].md   ← reusable sub-task procedures (referenced from prompts/routines)
   prompts/
     [task-slug].md       ← reusable task prompt templates
   routines/

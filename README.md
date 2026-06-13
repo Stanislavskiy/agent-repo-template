@@ -57,6 +57,7 @@ State passes between sessions via `.agents/scratch/` (gitignored). Every step ha
 |------|------------|
 | Behavior or API changes | Update `docs/` — distillation runs automatically on push |
 | Team convention changes | Edit `.agents/context/principles/` directly |
+| Recurring sub-task with project-specific steps | Add a playbook from `.agents/playbooks/TEMPLATE.md` |
 | Introducing a new pattern or library | Create an ADR from `.agents/adr/YYYYMMDD-template.md` |
 | Workspace context changes | Update `AGENTS.workspace.md` |
 

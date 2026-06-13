@@ -22,6 +22,9 @@ Choose exactly one destination:
 - **`docs/[relevant].md`** — factual correction about the codebase or its behavior
   → Update the relevant doc; flag that the distillation pipeline should run after this session
 
+- **`.agents/playbooks/[name].md`** — recurring project-specific sub-task procedure
+  → Create from `playbooks/TEMPLATE.md`; describe the steps concretely
+
 - **`adr/`** — architectural decision with lasting consequences
   → Create a new ADR from `adr/YYYYMMDD-template.md`; update `adr/INDEX.md`
 
