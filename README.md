@@ -4,6 +4,50 @@ A minimal context layer that helps AI agents work consistently across your codeb
 
 ---
 
+## How it works
+
+### The layer model
+
+Instead of giving every agent your entire codebase, this template routes agents to the minimum context each task actually needs. `AGENTS.md` is the entry point — it tells the agent what to load based on task type. Everything else loads on demand.
+
+The `.agents/` folder has five distinct layers, each with a different role:
+
+| Layer | Answers | Written by |
+|-------|---------|------------|
+| `context/` | What to *know* — architecture, domain, development rules | Developers |
+| `playbooks/` | How to *do X* — project-specific sub-task procedures | Developers |
+| `prompts/` | What *task* to run — standalone single-session templates | Developers |
+| `routines/` | How to *orchestrate* — multi-session workflows with gates | Developers |
+| `adr/` | What was *decided* — append-only architecture record | Developers + agents |
+
+### Principles and distillation
+
+`context/principles/` has two tiers:
+
+- **`principles/`** — hand-written agent rules. Maintained directly by the team. Imperative format: `DO NOT X`, `Use Y`.
+- **`principles/distilled/`** — auto-generated from `docs/` by an AI distillation agent on every push to `docs/**`. Never edited manually.
+
+`docs/` is the single source of truth. The distillation pipeline converts human-written documentation into compact, checkable rules that agents load during tasks. When docs change, the rules update automatically.
+
+### Prompts vs. routines
+
+**Prompts** are single-session task templates. One agent, one session, one output. Good for atomic tasks: fix a bug, review a PR, run a refactor.
+
+**Routines** are multi-session workflows. Each step runs in a fresh agent session with a deliberately narrow context ceiling. Use routines when:
+- The task requires a human review gate before code is written (e.g., approve the plan)
+- Different phases need different context to avoid anchoring bias (the agent that implements should not also review)
+- The task is too large to complete reliably in one session
+
+### Playbooks
+
+Playbooks are project-specific procedures — *how we do X in this codebase*. They differ from principles (which are rules: "DO NOT call X directly") and prompts (which are full tasks). A playbook describes the steps: file locations, tooling invocations, naming conventions for a recurring sub-task like writing a test or generating a migration.
+
+Agents don't discover playbooks automatically. Each playbook must be wired into a routine step or a principle so it loads in the right context. See `.agents/playbooks/TEMPLATE.md` for instructions.
+
+Prose playbooks work well for interactive agent use. For automated pipelines they become the spec for native tool implementations — MCP tools, function_calling schemas, or slash commands.
+
+---
+
 ## Integrate
 
 1. Copy into your repo: `.agents/`, `.github/`, `AGENTS.md`, `AGENTS.workspace.md`, `AGENTS.local.md.example`, `.gitignore`
